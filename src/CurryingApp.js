@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useState } from 'react';
 import {
   andThen,
   any,
@@ -22,9 +22,10 @@ import {
   propEq,
   reject,
   pick,
-  sortBy,
-} from "ramda";
-import Example from "./Example";
+  sortBy
+} from 'ramda';
+import Example from './Example';
+import SetState from './basic/setState';
 
 function CurryingApp() {
   // 1. uncurried version
@@ -189,7 +190,13 @@ function CurryingApp() {
   // getIncompleteTaskSummaries2("Scott");
   // Why do we always put callback first ?
 
-  return <Example/>;
+  // return <Example/>;
+  return (
+    <div>
+      <SetState />
+      <SetState2 />
+    </div>
+  );
 }
 
 export default CurryingApp;
