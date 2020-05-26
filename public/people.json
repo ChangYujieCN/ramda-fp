@@ -1,0 +1,44 @@
+{
+  "people": [
+    {
+      "name": "Roger",
+      "age": 18,
+      "money": 5000
+    },
+    {
+      "name": "Steve",
+      "age": 21,
+      "money": 30000
+    },
+    {
+      "name": "Lily",
+      "age": 12,
+      "money": 600
+    },
+    {
+      "name": "Jane",
+      "age": 21,
+      "money": 1000
+    },
+    {
+      "name": "Roy",
+      "age": 80,
+      "money": 5000
+    },
+    {
+      "name": "Ada",
+      "age": 33,
+      "money": 10000
+    },
+    {
+      "name": "Bruce",
+      "age": 20,
+      "money": 6000
+    },
+    {
+      "name": "James",
+      "age": 43,
+      "money": 12000
+    }
+  ]
+}

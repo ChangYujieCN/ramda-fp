@@ -1,25 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import {
+  andThen,
+  composeWith,
+  filter,
+  invoker,
+  gte,
+  __,
+  map,
+  prop,
+  propSatisfies,
+  sum
+} from 'ramda';
+import { Button, Card } from 'antd';
 import './App.css';
 
 function App() {
+  const [totalAmount, setTotalAmount] = useState(0);
+
+  const getAmount = composeWith(andThen, [
+    setTotalAmount,
+    sum,
+    map(prop('money')),
+    filter(propSatisfies(gte(__, 18), 'age')),
+    prop('people'),
+    invoker(0, 'json'),
+    fetch
+  ]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Card title={'总额'}>{totalAmount}</Card>
+      <Button onClick={() => getAmount('/people.json')}>看看我们有多少钱</Button>
+    </>
   );
 }
 
