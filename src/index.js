@@ -6,7 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import CurryingApp from "./CurryingApp";
 
 ReactDOM.render(
-    <CurryingApp />,
+    <App />,
   document.getElementById('root')
 );
 

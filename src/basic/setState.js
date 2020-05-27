@@ -5,13 +5,13 @@ class SetState extends Component {
     counter: 0
   };
   handleClick = () => {
-    this.setState({ counter: this.state.counter + 1 }, alert('设置cp成功'));
+    this.setState({ counter: this.state.counter + 1 }, alert('设置class component成功'));
   };
   render() {
     return (
       <div>
-        <div>counter: {this.state.counter}</div>
-        <Button onClick={this.handleClick}>+1</Button>
+        <div>class component counter: {this.state.counter}</div>
+        <button onClick={this.handleClick}>class component counter +1</button>
       </div>
     );
   }
@@ -24,7 +24,12 @@ const SetState2 = () => {
       alert('设置fp counter成功');
     }
   }, [counter]);
-  return <div>{counter}</div>;
+  return (
+    <div>
+      <div>hook component counter: {counter}</div>
+      <button onClick={()=> setCounter(counter + 1)}>hook component counter +1</button>
+    </div>
+  );
 };
 
 export default SetState;

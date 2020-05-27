@@ -69,11 +69,10 @@ const Combine = () => {
   //   return str + '!';
   // }
   //
-  // let result =
-  //   'hello'
-  //       |> doubleSay
-  //       |> capitalize
-  //       |> exclaim;
+  // let result = 'hello'
+  //             |> doubleSay
+  //             |> capitalize
+  //             |> exclaim;
   // console.log(result)
   return <div></div>;
 };

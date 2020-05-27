@@ -25,15 +25,23 @@ import {
   sortBy
 } from 'ramda';
 import Example from './Example';
-import SetState from './basic/setState';
+import {SetState, SetState2 } from './basic/setState';
 
 function CurryingApp() {
   // 1. uncurried version
-  // const formatName1 = function (first, middle, last) {
-  //   return first + " " + middle + " " + last;
-  // };
-  // console.log(formatName1('John', 'Paul', 'Jones'));
-  // console.log(formatName1('John', 'Paul'));
+  const formatName1 = function (first, middle, last) {
+    return first + " " + middle + " " + last;
+  };
+  console.log(formatName1('John', 'Paul', 'Jones'));
+  console.log(formatName1('John', 'Paul'));
+
+
+
+
+
+
+
+
 
   // 2. curried version
   // const formatNames2 = curry(function (first, middle, last) {
@@ -193,8 +201,8 @@ function CurryingApp() {
   // return <Example/>;
   return (
     <div>
-      <SetState />
-      <SetState2 />
+      {/*<SetState />*/}
+      {/*<SetState2 />*/}
     </div>
   );
 }
